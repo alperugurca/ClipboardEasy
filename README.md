@@ -4,6 +4,12 @@ ClipboardEasy - Clipboard history manager with one-click copy or paste. Windows 
 
 Clipboard Easy is a small Windows clipboard manager. It watches copied text, keeps the latest 100 entries, and lets you reuse them quickly.
 
+## Download
+
+Download `ClipboardEasy.exe` from the latest release:
+
+https://github.com/alperugurca/ClipboardEasy/releases/latest
+
 ## Features
 
 - Saves copied text automatically.
@@ -33,6 +39,7 @@ The build creates `ClipboardEasy.exe`.
 
 ## Files
 
+- `ClipboardEasy.exe` - Ready-to-run Windows app.
 - `clipboard_easy.cpp` - Main Windows app source code.
 - `app.ico` - App icon.
 - `app.rc` - Windows resource file for the icon.
