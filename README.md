@@ -39,7 +39,7 @@ The build creates `ClipboardEasy.exe`.
 
 ## Files
 
-- `ClipboardEasy.exe` - Ready-to-run Windows app.
+- `ClipboardEasy.exe` - Windows app.
 - `clipboard_easy.cpp` - Main Windows app source code.
 - `app.ico` - App icon.
 - `app.rc` - Windows resource file for the icon.
