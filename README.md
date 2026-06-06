@@ -1,6 +1,6 @@
 # Clipboard Easy
 
-ClipboardEasy - Clipboard history manager with one-click copy or paste. Windows app.
+Clipboard history manager with one-click copy or paste. Windows app.
 
 Clipboard Easy is a small Windows clipboard manager. It watches copied text, keeps the latest 100 entries, and lets you reuse them quickly.
 
@@ -25,7 +25,7 @@ https://github.com/alperugurca/ClipboardEasy/releases/latest
 1. Run `ClipboardEasy.exe`.
 2. Copy text anywhere.
 3. Choose `Copy` or `Paste + Enter`.
-4. Select saved text from the list.
+4. Click saved text from the list.
 
 ## Build
 
