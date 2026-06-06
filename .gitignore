@@ -1,0 +1,10 @@
+# Build output
+*.exe
+*.res
+
+# Runtime data
+clipboard_history.json
+
+# Local temp files
+*.tmp
+*.log
