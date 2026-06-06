@@ -16,7 +16,7 @@ Clipboard Easy is a small Windows clipboard manager. It watches copied text, kee
 
 ## How To Use
 
-1. Run `Clipboard Easy.exe`.
+1. Run `ClipboardEasy.exe`.
 2. Copy text anywhere.
 3. Choose `Copy` or `Paste + Enter`.
 4. Select saved text from the list.
@@ -29,7 +29,7 @@ Run:
 build.bat
 ```
 
-The build creates `Clipboard Easy.exe`.
+The build creates `ClipboardEasy.exe`.
 
 ## Files
 

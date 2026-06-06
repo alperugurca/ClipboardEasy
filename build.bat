@@ -48,7 +48,7 @@ if errorlevel 1 (
 
 g++ -std=c++17 -mwindows -O2 -static -static-libgcc -static-libstdc++ ^
     clipboard_easy.cpp "%RES_FILE%" ^
-    -o "Clipboard Easy.exe" ^
+    -o ClipboardEasy.exe ^
     -lcomctl32 -lmsimg32
 if errorlevel 1 (
     echo [ERROR] Build failed.
@@ -74,7 +74,7 @@ if errorlevel 1 (
 )
 
 cl /EHsc /O2 /W3 /nologo clipboard_easy.cpp "%RES_FILE%" ^
-   /Fe"Clipboard Easy.exe" /link /SUBSYSTEM:WINDOWS comctl32.lib user32.lib gdi32.lib msimg32.lib
+   /FeClipboardEasy.exe /link /SUBSYSTEM:WINDOWS comctl32.lib user32.lib gdi32.lib msimg32.lib
 if errorlevel 1 (
     echo [ERROR] Build failed.
     set "EXIT_CODE=1"
@@ -85,7 +85,7 @@ goto :ok
 :ok
 call :sign
 echo.
-echo [OK] Clipboard Easy.exe was created!
+echo [OK] ClipboardEasy.exe was created!
 echo To run it: "Start Clipboard Easy.bat"
 goto :done
 
@@ -104,9 +104,9 @@ if "%SIGN_PS%"=="" (
     exit /b 0
 )
 
-%SIGN_PS% -NoProfile -ExecutionPolicy Bypass -Command "$cert = Get-ChildItem Cert:\CurrentUser\My | Where-Object { $_.Subject -eq 'CN=Clipboard Easy' -and $_.HasPrivateKey } | Sort-Object NotBefore -Descending | Select-Object -First 1; if (-not $cert) { exit 2 }; $sig = Set-AuthenticodeSignature -FilePath '.\Clipboard Easy.exe' -Certificate $cert -HashAlgorithm SHA256 -TimestampServer 'http://timestamp.digicert.com'; if ($sig.SignerCertificate) { exit 0 } else { exit 1 }"
+%SIGN_PS% -NoProfile -ExecutionPolicy Bypass -Command "$cert = Get-ChildItem Cert:\CurrentUser\My | Where-Object { $_.Subject -eq 'CN=Clipboard Easy' -and $_.HasPrivateKey } | Sort-Object NotBefore -Descending | Select-Object -First 1; if (-not $cert) { exit 2 }; $sig = Set-AuthenticodeSignature -FilePath '.\ClipboardEasy.exe' -Certificate $cert -HashAlgorithm SHA256 -TimestampServer 'http://timestamp.digicert.com'; if ($sig.SignerCertificate) { exit 0 } else { exit 1 }"
 set "SIGN_RESULT=%ERRORLEVEL%"
-if "%SIGN_RESULT%"=="0" echo [OK] Clipboard Easy.exe was signed.
+if "%SIGN_RESULT%"=="0" echo [OK] ClipboardEasy.exe was signed.
 if "%SIGN_RESULT%"=="2" echo [INFO] Signing certificate not found; skipping signing.
 if not "%SIGN_RESULT%"=="0" if not "%SIGN_RESULT%"=="2" echo [WARN] Signing failed.
 exit /b 0

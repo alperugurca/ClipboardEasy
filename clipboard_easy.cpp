@@ -2,10 +2,10 @@
 //
 // Build (MinGW):
 //   windres app.rc -O coff -o app.res
-//   g++ -std=c++17 -mwindows -O2 -static -static-libgcc -static-libstdc++ clipboard_easy.cpp app.res -o "Clipboard Easy.exe" -lcomctl32 -lmsimg32
+//   g++ -std=c++17 -mwindows -O2 -static -static-libgcc -static-libstdc++ clipboard_easy.cpp app.res -o ClipboardEasy.exe -lcomctl32 -lmsimg32
 // Build (MSVC):
 //   rc /fo app.res app.rc
-//   cl /EHsc /O2 clipboard_easy.cpp app.res /Fe"Clipboard Easy.exe" /link /SUBSYSTEM:WINDOWS comctl32.lib user32.lib gdi32.lib msimg32.lib
+//   cl /EHsc /O2 clipboard_easy.cpp app.res /FeClipboardEasy.exe /link /SUBSYSTEM:WINDOWS comctl32.lib user32.lib gdi32.lib msimg32.lib
 
 #define UNICODE
 #define _UNICODE
